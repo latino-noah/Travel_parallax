@@ -725,6 +725,20 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   .hikes__grid { grid-template-columns: 1fr; }
   .hike:nth-child(n) { padding-inline: var(--edge); border-left: 0; }
   .q__options--visual, .q__options--n5, .q__options--n6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* hero copy sits on bright snow on tall screens — darken behind it */
+  .hero__ui::before {
+    content: ""; position: absolute; inset: 45% 0 0 0; pointer-events: none;
+    background: linear-gradient(to bottom, rgba(7, 26, 46, 0), rgba(7, 26, 46, 0.55));
+  }
+}
+
+/* Touch screens: comfortable tap areas without changing the layout */
+@media (hover: none), (max-width: 1024px) {
+  .nav a { padding-block: 12px; margin-block: -8px; }
+  .footer__bottom a, .credits summary { padding-block: 12px; margin-block: -12px; }
+  .credits li { line-height: 1.9; }
+  .credits a { padding-block: 6px; }
 }
 
 @media (max-width: 760px) {
@@ -738,16 +752,13 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   .nav__contact { display: none; }
   .nav__links { gap: 18px; }
 
-  .hero__ui::before {
-    content: ""; position: absolute; inset: 45% 0 0 0; pointer-events: none;
-    background: linear-gradient(to bottom, rgba(7, 26, 46, 0), rgba(7, 26, 46, 0.5));
-  }
   .hero__copy { bottom: 172px; }
   .hero__copy h2 { max-width: none; font-size: 22px; }
   .rule { margin: 14px 0 16px; }
   .hero__copy p { font-size: 13px; max-width: 34ch; }
 
-  .scroll { left: 20px; right: 20px; width: auto; bottom: 88px; row-gap: 14px; font-size: 10px; }
+  .scroll { left: 20px; right: 20px; width: auto; bottom: 88px; row-gap: 14px; font-size: 11px; }
+  .footer__mail { font-size: clamp(22px, 7.4vw, 44px); padding-block: 8px; }
 
   .section__head { grid-template-columns: 1fr; }
   .about__grid { grid-template-columns: 1fr; }
@@ -790,7 +801,7 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   .atlas__cta { height: 42px; margin-top: 12px; font-size: 11px; letter-spacing: 0.08em; }
   .atlas__fine { display: none; }
   .atlas__close { top: 8px; right: 8px; left: auto; width: 30px; height: 30px; }
-  .atlas__hint { margin-top: 8px; font-size: 10px; }
+  .atlas__hint { margin-top: 8px; font-size: 11px; }
 }
 
 @media (max-width: 380px) {
@@ -798,9 +809,9 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 }
 
 @media (max-height: 560px) and (orientation: landscape) {
-  .hero__copy p { display: none; }
-  .hero__copy { bottom: 80px; }
+  .hero__copy { display: none; }
   .scroll { display: none; }
+  .book { min-height: 0; }
 }
 
 /* --------------------------------------------------------------------------

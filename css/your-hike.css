@@ -209,6 +209,12 @@
 
 .credits__list { display: grid; gap: 6px; margin-top: 12px; }
 
+/* Touch screens: comfortable tap areas */
+@media (hover: none), (max-width: 1024px) {
+  .yh-hero__scroll { padding-block: 12px; margin-bottom: -12px; }
+  .route__caption a { display: inline-block; padding-block: 8px; margin-block: -8px; }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -252,4 +258,15 @@
   .yh-cta { min-height: 0; }
   .yh-cta__buttons { flex-direction: column; align-items: stretch; }
   .btn { padding: 0 20px; letter-spacing: 0.08em; }
+}
+
+/* Phones in landscape: fit the hero into the short viewport */
+@media (max-height: 560px) and (orientation: landscape) {
+  .yh-hero { min-height: 0; }
+  .yh-hero__content { bottom: 48px; }
+  .yh-hero__title { margin-top: 10px; font-size: 44px; }
+  .yh-hero__where { margin-top: 10px; }
+  .yh-hero__intro, .yh-hero__scroll { display: none; }
+  .yh-hero__meta { margin-top: 14px; }
+  .is-empty .yh-hero__content { bottom: 50%; }
 }
