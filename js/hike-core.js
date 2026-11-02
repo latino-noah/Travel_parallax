@@ -48,7 +48,7 @@
   /* ------------------------------------------------------------------------
      Matching — weighted score per answer, 0–1 each
      ------------------------------------------------------------------------ */
-  const WEIGHTS = { landscape: 3, difficulty: 3, duration: 2.5, region: 2.5, goal: 2, group: 1.5 };
+  const WEIGHTS = { landscape: 3, difficulty: 3, duration: 2.5, region: 2.5, weather: 2.5, goal: 2, group: 1.5 };
   const BUCKETS = question("duration").options.map((o) => o.range); // last one = multi-day
 
   function durationBuckets(trail) {
@@ -75,6 +75,7 @@
       if (v === "surprise") return 1;
       return t.region === v ? 1 : inEurope ? 0.25 : 0;
     },
+    weather: (t, v) => (v === "any" ? 1 : t.weather[v] || 0),
     goal: (t, v) => t.experiences[v] || 0,
     group: (t, v) => (t.groups.includes(v) ? 1 : 0),
   };
@@ -113,6 +114,7 @@
   const DIFF_LABELS = { 1: "Easy", 1.5: "Easy–moderate", 2: "Moderate", 2.5: "Moderate–challenging", 3: "Challenging", 3.5: "Challenging–extreme", 4: "Extreme" };
   const LANDSCAPE_NOUN = { mountains: "mountain", forests: "forest", lakes: "lake", coastal: "coastal", snowy: "glacier", valleys: "valley" };
 
+  const typicalWeather = (t) => Object.entries(t.weather).sort((a, b) => b[1] - a[1])[0][0];
   const difficultyLabel = (t) => DIFF_LABELS[t.difficulty];
   const durationText = (t) => (t.days ? `${t.days[0]}–${t.days[1]} days` : `${fmtHours(t.hours[0])}–${fmtHours(t.hours[1])} hours`);
   const fmtHours = (h) => String(h).replace(".5", "½");
@@ -195,6 +197,21 @@
             ? `You were open to anywhere in the world; this European trail, in ${where}, scored highest.`
             : `Nothing in ${phrase("region")} matched your other answers as closely, so we looked further afield: ${where}.`;
       out.push({ key: "region", answer: label("region"), strength: strength(parts.region), text });
+    }
+
+    // weather
+    {
+      const v = answers.weather;
+      const s = parts.weather;
+      const typical = option("weather", typicalWeather(trail)).phrase;
+      const text = v === "any"
+        ? `You don't mind the weather — in season, expect mostly ${typical}. Best time: ${trail.season}.`
+        : s >= 0.8
+          ? `You like ${phrase("weather")}, and that's typical here in season. Best time: ${trail.season}.`
+          : s >= 0.4
+            ? `You may get ${phrase("weather")}, but expect mostly ${typical} in season. Best time: ${trail.season}.`
+            : `Expect ${typical} rather than ${phrase("weather")} — but it matched the rest of your answers best.`;
+      out.push({ key: "weather", answer: label("weather"), strength: strength(s), text });
     }
 
     // goal
