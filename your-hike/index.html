@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Hike — Travel</title>
+  <meta name="description" content="Your personalised hiking recommendation, matched to your answers.">
+  <meta name="theme-color" content="#071a2e">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/your-hike.css">
+  <script>
+    // The page-transition curtain covers the page until your-hike.js lifts it (never longer than 4s).
+    (function (root) {
+      root.classList.add("js");
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("js-curtain");
+      setTimeout(function () { root.classList.remove("js-curtain"); }, 4000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <div class="curtain" aria-hidden="true"><span class="curtain__label">Your personalised adventure</span></div>
+
+  <a class="skip-link" href="#overview">Skip to content</a>
+
+  <header class="nav yh-nav">
+    <nav class="nav__links" aria-label="Primary">
+      <a href="../">Home</a>
+      <a href="../#trips">Our Trips</a>
+      <a href="../#destinations">Destinations</a>
+      <a href="../#plan">Trail finder</a>
+    </nav>
+    <div class="nav__contact">
+      <a href="tel:+31611806006">+31 6 11806006</a>
+      <a href="mailto:noahda.c@outlook.com">noahda.c@outlook.com</a>
+    </div>
+  </header>
+
+  <main id="your-hike" aria-live="polite">
+    <!-- A. HERO -->
+    <section class="yh-hero" aria-labelledby="yh-title">
+      <div class="yh-hero__media"><img alt="" fetchpriority="high" decoding="async"></div>
+      <div class="yh-hero__shade" aria-hidden="true"></div>
+      <div class="yh-hero__content wrap">
+        <p class="yh-hero__label" data-hero>Your personalised adventure</p>
+        <h1 class="yh-hero__title" id="yh-title" data-hero></h1>
+        <p class="yh-hero__where" data-hero></p>
+        <p class="yh-hero__intro" data-hero></p>
+        <div class="yh-hero__meta" data-hero></div>
+      </div>
+      <a class="yh-hero__scroll" href="#overview" data-hero>
+        <svg viewBox="0 0 12 16" aria-hidden="true"><path d="M2 2l4 4 4-4M2 8l4 4 4-4"/></svg>
+        Explore your hike
+      </a>
+    </section>
+
+    <div class="yh-body" hidden>
+      <!-- B. OVERVIEW -->
+      <section class="section yh-overview" id="overview" aria-labelledby="overview-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="eyebrow" data-fade>01 — Hiking overview</p>
+            <h2 class="heading" id="overview-title" data-fade>The trail at a glance</h2>
+          </div>
+          <dl class="facts" data-fade></dl>
+          <p class="yh-note" data-fade>≈ Figures are approximate, rounded from published trail descriptions. Distance, ascent and timing vary with the variant you choose and conditions on the day.</p>
+        </div>
+      </section>
+
+      <!-- C. WHY IT MATCHES -->
+      <section class="section yh-why" aria-labelledby="why-title">
+        <div class="wrap">
+          <p class="eyebrow" data-fade>02 — Why this hike matches you</p>
+          <h2 class="sr-only" id="why-title">Why this hike matches you</h2>
+          <p class="statement yh-why__summary" data-fade></p>
+          <ol class="reasons"></ol>
+        </div>
+      </section>
+
+      <!-- D. WHAT TO EXPECT -->
+      <section class="section yh-expect" aria-labelledby="expect-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="eyebrow" data-fade>03 — What to expect</p>
+            <h2 class="heading" id="expect-title" data-fade>On the trail</h2>
+          </div>
+          <ul class="expect"></ul>
+        </div>
+      </section>
+
+      <!-- E. GALLERY -->
+      <section class="yh-gallery" aria-labelledby="gallery-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="eyebrow" data-fade>04 — Gallery</p>
+            <h2 class="heading" id="gallery-title" data-fade>Picture yourself there</h2>
+          </div>
+        </div>
+        <div class="gallery wrap"></div>
+      </section>
+
+      <!-- F. ROUTE & PRACTICAL -->
+      <section class="section yh-route" aria-labelledby="route-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="eyebrow" data-fade>05 — Route &amp; practical information</p>
+            <h2 class="heading" id="route-title" data-fade>Before you go</h2>
+          </div>
+          <div class="route">
+            <div class="route__visual">
+              <figure class="route__map" data-fade>
+                <div class="map" id="map" data-lenis-prevent></div>
+                <figcaption class="route__caption"></figcaption>
+              </figure>
+              <figure class="profile" data-fade>
+                <figcaption class="profile__head">
+                  <span>Elevation profile</span>
+                  <span class="profile__note">Simplified from key waypoints · approximate</span>
+                </figcaption>
+                <div class="profile__chart"></div>
+                <ol class="profile__points"></ol>
+              </figure>
+            </div>
+            <div class="route__info">
+              <dl class="route__facts" data-fade></dl>
+              <div class="route__list" data-fade>
+                <h3>Recommended equipment</h3>
+                <ul class="checklist" data-list="gear"></ul>
+              </div>
+              <div class="route__list" data-fade>
+                <h3>Safety considerations</h3>
+                <ul class="checklist checklist--warn" data-list="safety"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Other close matches -->
+      <section class="section yh-more" aria-labelledby="more-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="eyebrow" data-fade>06 — Also a strong match</p>
+            <h2 class="heading" id="more-title" data-fade>Other trails for you</h2>
+          </div>
+          <ul class="more"></ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- G. CALL TO ACTION (also the empty state when no answers were submitted) -->
+    <section class="yh-cta" aria-labelledby="cta-title">
+      <div class="yh-cta__media" aria-hidden="true">
+        <img src="../assets/img/summit-1440.webp" srcset="../assets/img/summit-1440.webp 1440w, ../assets/img/summit-2560.webp 2560w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="wrap yh-cta__inner">
+        <p class="eyebrow" data-fade>Ready for more?</p>
+        <h2 class="yh-cta__title" id="cta-title" data-fade>Your next trail is waiting</h2>
+        <div class="yh-cta__buttons" data-fade>
+          <a class="btn btn--solid" href="../#plan" data-action="restart">
+            Explore another hike
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="../#plan" data-action="edit">
+            Change my preferences
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer yh-footer">
+      <div class="wrap">
+        <p class="eyebrow">Book this hike</p>
+        <a class="footer__mail" href="mailto:noahda.c@outlook.com">noahda.c@outlook.com</a>
+        <div class="footer__bottom">
+          <a href="tel:+31611806006">+31 6 11806006</a>
+          <span>© <span id="year">2026</span> Travel. Guided hiking holidays.</span>
+          <a href="../">Back to home ↑</a>
+        </div>
+        <details class="credits">
+          <summary>Photo credits &amp; map data</summary>
+          <ul class="credits__list"></ul>
+        </details>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+  <script src="../js/hike-data.js" defer></script>
+  <script src="../js/hike-photos.js" defer></script>
+  <script src="../js/hike-core.js" defer></script>
+  <script src="../js/your-hike.js" defer></script>
+</body>
+</html>

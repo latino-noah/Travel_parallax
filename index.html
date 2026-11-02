@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="css/style.css">
   <script>
     // Show the welcome loader and hide intro elements until main.js takes over;
-    // never leave either in place if it doesn't.
+    // never leave either in place if it doesn't. Visitors returning to the trail finder (#plan) skip the loader.
     (function (root) {
-      root.classList.add("js-loader", "is-loading");
+      if (location.hash !== "#plan") root.classList.add("js-loader", "is-loading");
       if (!matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("js-anim");
       setTimeout(function () { root.classList.remove("js-loader", "is-loading", "js-anim"); }, 9000);
     })(document.documentElement);
@@ -106,8 +106,8 @@
           </div>
 
           <div class="cta" data-reveal>
-            <a href="#book-form" class="cta__pill">Book your Hike</a>
-            <a href="#book-form" class="cta__arrow" aria-label="Book your hike">
+            <a href="#plan" class="cta__pill">Find your Hike</a>
+            <a href="#plan" class="cta__arrow" aria-label="Find your hike">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             </a>
           </div>
@@ -214,71 +214,40 @@
       </div>
     </section>
 
-    <!-- PLAN — booking banner -->
-    <section class="book" id="plan" aria-labelledby="book-title">
+    <!-- FIND YOUR NEXT ADVENTURE — six-question trail finder (rendered by js/hike-finder.js) -->
+    <section class="book" id="plan" aria-labelledby="finder-title">
       <div class="book__media" aria-hidden="true">
         <img
           src="assets/img/summit-1440.webp"
           srcset="assets/img/summit-1440.webp 1440w, assets/img/summit-2560.webp 2560w"
           sizes="100vw" alt="" loading="lazy" decoding="async">
       </div>
-      <div class="book__inner wrap">
-        <div class="book__intro">
-          <p class="eyebrow" data-fade>04 — Plan your hike</p>
-          <h2 class="book__title" id="book-title" data-fade>What are you waiting for?</h2>
-          <p class="book__lead" data-fade>Tell us where and when. We plan the route, the guide and everything in between — and get back to you within a day.</p>
-        </div>
+      <div class="finder-wrap wrap">
+        <header class="finder-head">
+          <p class="eyebrow" data-fade>04 — Trail finder</p>
+          <h2 class="finder-head__title" id="finder-title" data-fade>Find your next adventure</h2>
+          <p class="finder-head__lead" data-fade>Every journey is different. Tell us what inspires you, and we'll find the perfect trail for you.</p>
+        </header>
 
-        <form class="book__form" id="book-form" data-fade novalidate>
-          <label class="field field--full">
-            <span>Where do you want to hike?</span>
-            <input type="text" name="destination" placeholder="Mountain, trail or country" list="dest-options" autocomplete="off" required>
-          </label>
-          <datalist id="dest-options">
-            <option value="Mount Fuji"><option value="Dolomites"><option value="Matterhorn">
-            <option value="Tour du Mont Blanc"><option value="Torres del Paine"><option value="Kilimanjaro">
-            <option value="Machu Picchu"><option value="Everest Base Camp"><option value="Landmannalaugar">
-          </datalist>
-          <label class="field">
-            <span>Departure</span>
-            <input type="date" name="departure" required>
-          </label>
-          <label class="field">
-            <span>Return</span>
-            <input type="date" name="return">
-          </label>
-          <div class="field field--stepper" role="group" aria-labelledby="lbl-adults">
-            <span id="lbl-adults">Adults</span>
-            <div class="stepper" data-min="1" data-max="12">
-              <button type="button" data-step="-1" aria-label="Fewer adults">−</button>
-              <output name="adults" aria-live="polite">2</output>
-              <button type="button" data-step="1" aria-label="More adults">+</button>
-            </div>
+        <div class="finder" id="hike-finder" data-fade>
+          <div class="finder__bar">
+            <p class="finder__count" aria-live="polite"><b>01</b> / 06</p>
+            <span class="finder__progress" aria-hidden="true"><span></span></span>
+            <button type="button" class="finder__restart" hidden>Start over</button>
           </div>
-          <div class="field field--stepper" role="group" aria-labelledby="lbl-children">
-            <span id="lbl-children">Children <small>(8–15)</small></span>
-            <div class="stepper" data-min="0" data-max="10">
-              <button type="button" data-step="-1" aria-label="Fewer children">−</button>
-              <output name="children" aria-live="polite">0</output>
-              <button type="button" data-step="1" aria-label="More children">+</button>
-            </div>
+          <div class="finder__stage"></div>
+          <div class="finder__nav">
+            <button type="button" class="finder__back">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+              Back
+            </button>
+            <button type="button" class="finder__next">
+              Next
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
           </div>
-          <label class="field field--full">
-            <span>Trip style</span>
-            <select name="style">
-              <option>No preference</option>
-              <option>Day hikes</option>
-              <option>Hut-to-hut trek</option>
-              <option>Summit climb</option>
-              <option>Expedition trek</option>
-            </select>
-          </label>
-          <button class="book__submit" type="submit">
-            Plan my hike
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-          <p class="book__note">No payment needed. We reply within a day.</p>
-        </form>
+          <noscript><p class="finder__noscript">The trail finder needs JavaScript. Email us at <a href="mailto:noahda.c@outlook.com">noahda.c@outlook.com</a> and we'll suggest a hike.</p></noscript>
+        </div>
       </div>
     </section>
 
@@ -300,70 +269,70 @@
       </div>
       <ul class="dest__track" aria-label="Destinations" data-fade>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Mount Fuji">
+          <a href="#plan">
             <img src="assets/img/dest/fuji-blossom-900.webp" alt="Mount Fuji behind cherry blossom" loading="lazy" style="--x: 50%; --y: 50%">
             <span class="dest__country">Japan</span>
             <span class="dest__name">Mount Fuji</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Dolomites">
+          <a href="#plan">
             <img src="assets/img/dest/dolomites-900.webp" alt="Lago di Braies below Dolomite peaks" loading="lazy" style="--x: 50%; --y: 40%">
             <span class="dest__country">Italy</span>
             <span class="dest__name">Dolomites</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Matterhorn">
+          <a href="#plan">
             <img src="assets/img/dest/matterhorn-900.webp" alt="The Matterhorn above pine forest" loading="lazy" style="--x: 50%; --y: 35%">
             <span class="dest__country">Switzerland</span>
             <span class="dest__name">Matterhorn</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Torres del Paine">
+          <a href="#plan">
             <img src="assets/img/dest/paine-900.webp" alt="Torres del Paine at sunrise" loading="lazy" style="--x: 40%; --y: 50%">
             <span class="dest__country">Chile</span>
             <span class="dest__name">Torres del Paine</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Kilimanjaro">
+          <a href="#plan">
             <img src="assets/img/dest/kili-900.webp" alt="Kilimanjaro rising above the clouds" loading="lazy" style="--x: 45%; --y: 50%">
             <span class="dest__country">Tanzania</span>
             <span class="dest__name">Kilimanjaro</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Machu Picchu">
+          <a href="#plan">
             <img src="assets/img/dest/machu-900.webp" alt="Machu Picchu below Huayna Picchu" loading="lazy" style="--x: 52%; --y: 50%">
             <span class="dest__country">Peru</span>
             <span class="dest__name">Machu Picchu</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Everest Base Camp">
+          <a href="#plan">
             <img src="assets/img/dest/everest-900.webp" alt="Ama Dablam above the trail to Everest Base Camp" loading="lazy" style="--x: 72%; --y: 50%">
             <span class="dest__country">Nepal</span>
             <span class="dest__name">Everest Base Camp</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Tour du Mont Blanc">
+          <a href="#plan">
             <img src="assets/img/dest/blanc-900.webp" alt="Mont Blanc reflected in an alpine lake" loading="lazy" style="--x: 38%; --y: 50%">
             <span class="dest__country">France · Italy · Switzerland</span>
             <span class="dest__name">Tour du Mont Blanc</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="Landmannalaugar">
+          <a href="#plan">
             <img src="assets/img/dest/iceland-900.webp" alt="Colourful rhyolite hills of Landmannalaugar" loading="lazy" style="--x: 50%; --y: 50%">
             <span class="dest__country">Iceland</span>
             <span class="dest__name">Landmannalaugar</span>
           </a>
         </li>
         <li class="dest__card">
-          <a href="#book-form" data-destination="">
+          <a href="#plan">
             <img src="assets/img/dest/trail-900.webp" alt="Stone path through a mountain forest" loading="lazy" style="--x: 50%; --y: 60%">
             <span class="dest__country">Your route</span>
             <span class="dest__name">Anywhere else</span>
@@ -390,7 +359,7 @@
               <li><span><b>10 guests</b> · challenging, 3,776 m summit</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5.5M18 14.5c1.8.8 3 2.7 3 5"/></svg></li>
               <li><span>Loved by <b>260+</b> hikers</span><span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span></li>
             </ul>
-            <a class="hike__cta" href="#book-form" data-destination="Mount Fuji">
+            <a class="hike__cta" href="#plan">
               Explore hike
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -409,7 +378,7 @@
               <li><span><b>12 guests</b> · moderate, 12 km a day</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5.5M18 14.5c1.8.8 3 2.7 3 5"/></svg></li>
               <li><span>Loved by <b>310+</b> hikers</span><span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span></li>
             </ul>
-            <a class="hike__cta" href="#book-form" data-destination="Dolomites">
+            <a class="hike__cta" href="#plan">
               Explore hike
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -428,7 +397,7 @@
               <li><span><b>8 guests</b> · moderate, 16 km a day</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5.5M18 14.5c1.8.8 3 2.7 3 5"/></svg></li>
               <li><span>Loved by <b>180+</b> hikers</span><span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span></li>
             </ul>
-            <a class="hike__cta" href="#book-form" data-destination="Torres del Paine">
+            <a class="hike__cta" href="#plan">
               Explore hike
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -447,7 +416,7 @@
               <li><span><b>10 guests</b> · demanding, 5,895 m summit</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5.5M18 14.5c1.8.8 3 2.7 3 5"/></svg></li>
               <li><span>Loved by <b>140+</b> hikers</span><span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span></li>
             </ul>
-            <a class="hike__cta" href="#book-form" data-destination="Kilimanjaro">
+            <a class="hike__cta" href="#plan">
               Explore hike
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -457,6 +426,30 @@
           </figure>
         </article>
       </div>
+    </section>
+
+    <!-- EXPLORE BY DESTINATION — world map with mountain destinations (js/world-map.js) -->
+    <section class="atlas" id="explore" aria-labelledby="atlas-title">
+      <div class="wrap atlas__head">
+        <p class="eyebrow" data-fade>Destination map</p>
+        <h2 class="atlas__title" id="atlas-title" data-fade>Explore by destination</h2>
+        <p class="atlas__lead" data-fade>Discover breathtaking mountain destinations around the world. Explore the map and find your next adventure.</p>
+        <div class="atlas__filters" role="group" aria-label="Filter destinations by continent" data-fade>
+          <button type="button" data-filter="all" aria-pressed="true">All destinations</button>
+          <button type="button" data-filter="europe" aria-pressed="false">Europe</button>
+          <button type="button" data-filter="asia" aria-pressed="false">Asia</button>
+          <button type="button" data-filter="north-america" aria-pressed="false">North America</button>
+          <button type="button" data-filter="south-america" aria-pressed="false">South America</button>
+          <button type="button" data-filter="africa" aria-pressed="false">Africa</button>
+          <button type="button" data-filter="oceania" aria-pressed="false">Oceania</button>
+        </div>
+      </div>
+      <div class="atlas__stage">
+        <div class="atlas__map" data-src="assets/world-map.svg"></div>
+        <div class="atlas__tip" role="tooltip" hidden></div>
+        <aside class="atlas__panel" hidden></aside>
+      </div>
+      <p class="wrap atlas__hint"><span class="atlas__dot" aria-hidden="true"></span>Select a marker to explore · choose a region to zoom in</p>
     </section>
 
     <!-- CONTACT -->
@@ -479,6 +472,34 @@
             <li>Machu Picchu — <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Per%C3%BA,_2015-07-30,_DD_37.jpg" rel="noopener">Diego Delso</a>, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener license">CC BY-SA 4.0</a>, resized</li>
             <li>Ama Dablam — <a href="https://commons.wikimedia.org/wiki/File:Himalayas,_Cholatse,_Nepal.jpg" rel="noopener">Vyacheslav Argenberg</a>, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>, resized</li>
             <li>Landmannalaugar — <a href="https://commons.wikimedia.org/wiki/File:Landmannalaugar_Iceland_2005_2.JPG" rel="noopener">Chris 73</a>, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener license">CC BY-SA 3.0</a>, resized</li>
+            <li>The three north faces of the Tre Cime di Lavaredo — <a href="https://commons.wikimedia.org/wiki/File:Tre_Cime_di_Lavaredo_from_Monte_Specie,_Val_Pusteria,_Trentino-Alto_Adige,_Italy,_2025_October.jpg" rel="noopener">Ximonic (Simo Räsänen)</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Forested sandstone plateau in Saxon Switzerland — <a href="https://commons.wikimedia.org/wiki/File:Nationalpark_S%C3%A4chsische_Schweiz_20260906_Schrammsteine_01.jpg" rel="noopener">NutzerAusBerlin</a>, Wikimedia Commons, CC0, resized</li>
+            <li>The Matterhorn reflected in a lake at sunset — <a href="https://commons.wikimedia.org/wiki/File:043_Matterhorn_reflecting_in_Stellisee_at_sunset_Photo_by_Giles_Laurent.jpg" rel="noopener">Giles Laurent</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Vernazza and its harbour from the coastal path — <a href="https://commons.wikimedia.org/wiki/File:Vernazza_dal_Sentiero_Azzurro.jpg" rel="noopener">СССР</a>, Wikimedia Commons, CC BY-SA 2.5 ca, resized</li>
+            <li>The Great Aletsch Glacier curving between mountains — <a href="https://commons.wikimedia.org/wiki/File:Glacier_d%27Aletsch.jpg" rel="noopener">Gzzz</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Staubbach Falls and the Lauterbrunnen valley under low cloud — <a href="https://commons.wikimedia.org/wiki/File:1_lauterbrunnen_valley_2012.jpg" rel="noopener">chensiyuan</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Rainbow over a Highland glen — <a href="https://commons.wikimedia.org/wiki/File:Glen_Coe_Rainbow.jpg" rel="noopener">Colin</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>The Seceda ridge rising above a sea of clouds — <a href="https://commons.wikimedia.org/wiki/File:Odles_da_Seceda_da_duman_tl_nibl_Gherd%C3%ABina.jpg" rel="noopener">Wolfgang Moroder</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>Preikestolen cliff above the Lysefjord — <a href="https://commons.wikimedia.org/wiki/File:Preikestolen-lysefjord-tunliweb.jpg" rel="noopener">Svein Magne Tunli</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>The Amalfi Coast from the Path of the Gods — <a href="https://commons.wikimedia.org/wiki/File:Sentiero_degli_Dei_15_Campania.jpg" rel="noopener">Wolfgang Moroder</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>The granite towers of Torres del Paine above their lake — <a href="https://commons.wikimedia.org/wiki/File:Towers_of_Paine_-_Torres_del_Paine_National_Park_13.jpg" rel="noopener">Thomas Fuhrmann</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Coloured rhyolite mountains at Landmannalaugar — <a href="https://commons.wikimedia.org/wiki/File:Laugavegur_Brennisteinsalda_2012.JPG" rel="noopener">Borvan53</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>The Eiger north face above the Grindelwald valley — <a href="https://commons.wikimedia.org/wiki/File:Wanderung_in_Grindelwald_03.jpg" rel="noopener">Chrisi1964</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Glaciers and granite spires of the Mont Blanc massif — <a href="https://commons.wikimedia.org/wiki/File:Glacier_du_Mont_Mallet_(Glacier_du_G%C3%A9ant)_%26_Mont_Blanc,_2010_July.jpg" rel="noopener">Ximonic, Simo Räsänen</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>Glacier below Aneto, the highest peak of the Pyrenees — <a href="https://commons.wikimedia.org/wiki/File:Aneto_from_Portillon_Superior_14-08-2013.JPG" rel="noopener">Valugi</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>The Grossglockner above the Pasterze glacier — <a href="https://commons.wikimedia.org/wiki/File:Grossglockner_-_Rakousko_-_panoramio.jpg" rel="noopener">Pavel Špindler</a>, Wikimedia Commons, CC BY 3.0, resized</li>
+            <li>Triglav rising above limestone ridges in the Julian Alps — <a href="https://commons.wikimedia.org/wiki/File:Triglav_(August_2024).jpg" rel="noopener">Viktar Palstsiuk</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Glacial lake and ridges in the Făgăraș Mountains — <a href="https://commons.wikimedia.org/wiki/File:B%C3%A2lea_Lake,_F%C4%83g%C4%83ra%C8%99_Mountains,_Romania_(48677752623).jpg" rel="noopener">xulescu_g</a>, Wikimedia Commons, CC BY-SA 2.0, resized</li>
+            <li>Everest lit by the last sun above the Khumbu — <a href="https://commons.wikimedia.org/wiki/File:View_of_Everest_Base_Camp_Trek.jpg" rel="noopener">Parashu98512</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>The snow-covered south face of Annapurna above autumn grassland — <a href="https://commons.wikimedia.org/wiki/File:Annapurna_Massif-5133.jpg" rel="noopener">Bijay Chaurasia</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Turquoise Ala-Kul lake in the Tian Shan — <a href="https://commons.wikimedia.org/wiki/File:Ala-K%C3%B6l.jpg" rel="noopener">Ondřej Žváček</a>, Wikimedia Commons, CC BY 2.5, resized</li>
+            <li>Moraine Lake below the Valley of the Ten Peaks — <a href="https://commons.wikimedia.org/wiki/File:Moraine_Lake-Banff_NP.JPG" rel="noopener">Tobias Alt, Tobi 87</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>El Capitan and Yosemite Valley from Tunnel View — <a href="https://commons.wikimedia.org/wiki/File:Tunnel_View,_Yosemite_Valley,_Yosemite_NP_-_Diliff.jpg" rel="noopener">Diliff</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>Glaciated peaks above Laguna Parón in the Cordillera Blanca — <a href="https://commons.wikimedia.org/wiki/File:Laguna_Par%C3%B3n_(Cordillera_Blanca)_-_panoramio_(1).jpg" rel="noopener">TMbux</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>Kilimanjaro above a high camp — <a href="https://commons.wikimedia.org/wiki/File:Karanga_Camp_(4000m)_Kilimanjaro.jpg" rel="noopener">Phase9</a>, Wikimedia Commons, CC BY-SA 3.0, resized</li>
+            <li>Hikers below snowy peaks in the High Atlas — <a href="https://commons.wikimedia.org/wiki/File:Jebel_Toubkal_and_a_group_of_hikers.jpg" rel="noopener">Kurinurm</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>Aoraki / Mount Cook above a glacial valley — <a href="https://commons.wikimedia.org/wiki/File:Aoraki_-_Mt_Cook,_Aoraki_-_Mount_Cook_National_Park,_New_Zealand.jpg" rel="noopener">Michal Klajban</a>, Wikimedia Commons, CC BY-SA 4.0, resized</li>
+            <li>World map — <a href="https://www.naturalearthdata.com/" rel="noopener">Natural Earth</a> country outlines (via world-atlas), public domain</li>
           </ul>
         </details>
       </div>
@@ -489,5 +510,12 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/hike-data.js" defer></script>
+  <script src="js/hike-photos.js" defer></script>
+  <script src="js/hike-core.js" defer></script>
+  <script src="js/hike-finder.js" defer></script>
+  <script src="js/destination-photos.js" defer></script>
+  <script src="js/destinations-data.js" defer></script>
+  <script src="js/world-map.js" defer></script>
 </body>
 </html>

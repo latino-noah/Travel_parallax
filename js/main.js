@@ -176,76 +176,14 @@
 
   // Smooth scroll via Lenis once it's running; native scrolling otherwise.
   let lenis = null;
-  function scrollToTarget(target, offset = 0, onComplete) {
+  function scrollToTarget(target) {
     if (lenis) {
-      lenis.scrollTo(target, { duration: 1.6, offset, onComplete });
+      lenis.scrollTo(target, { duration: 1.6 });
       return;
     }
-    const top = target === 0 ? 0 : target.getBoundingClientRect().top + scrollY + offset;
+    const top = target === 0 ? 0 : target.getBoundingClientRect().top + scrollY;
     window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
-    if (onComplete) setTimeout(onComplete, reduceMotion ? 0 : 900);
   }
-
-  /* ------------------------------------------------------------------------
-     Booking form
-     ------------------------------------------------------------------------ */
-  const form = document.getElementById("book-form");
-  const field = (name) => form.elements[name];
-
-  const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-  field("departure").min = today;
-  field("return").min = today;
-  field("departure").addEventListener("change", () => {
-    const dep = field("departure").value;
-    field("return").min = dep || today;
-    if (field("return").value && field("return").value < dep) field("return").value = "";
-  });
-
-  form.querySelectorAll(".stepper").forEach((stepper) => {
-    const out = stepper.querySelector("output");
-    const [minus, plus] = stepper.querySelectorAll("button");
-    const min = Number(stepper.dataset.min);
-    const max = Number(stepper.dataset.max);
-    const sync = () => {
-      minus.setAttribute("aria-disabled", Number(out.value) <= min);
-      plus.setAttribute("aria-disabled", Number(out.value) >= max);
-    };
-    stepper.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-step]");
-      if (!btn) return;
-      out.value = Math.min(max, Math.max(min, Number(out.value) + Number(btn.dataset.step)));
-      sync();
-    });
-    sync();
-  });
-
-  form.addEventListener("input", (e) => {
-    if (e.target.value) e.target.removeAttribute("aria-invalid");
-  });
-
-  // No booking backend yet: hand the request to the visitor's mail app.
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const missing = ["destination", "departure"].map(field).filter((f) => !f.value.trim());
-    ["destination", "departure"].map(field).forEach((f) => f.setAttribute("aria-invalid", missing.includes(f)));
-    if (missing.length) {
-      missing[0].focus();
-      return;
-    }
-    const v = (name) => field(name).value;
-    const body = [
-      `Destination: ${v("destination")}`,
-      `Departure: ${v("departure")}`,
-      `Return: ${v("return") || "One way"}`,
-      `Adults: ${v("adults")}`,
-      `Children: ${v("children")}`,
-      `Trip style: ${v("style")}`,
-    ].join("\n");
-    form.querySelector(".book__note").textContent = "Opening your email app…";
-    window.location.href =
-      `mailto:noahda.c@outlook.com?subject=${encodeURIComponent(`Hiking request — ${v("destination")}`)}` +
-      `&body=${encodeURIComponent(body)}`;
-  });
 
   /* ------------------------------------------------------------------------
      Destinations carousel
@@ -269,18 +207,6 @@
   window.addEventListener("resize", updateDestArrows);
   updateDestArrows();
 
-  // Picking a destination or hike fills in the booking form, scrolls there, then focuses the next field.
-  // Focus waits for the scroll: focusing a date input mid-animation makes the page jump.
-  document.querySelectorAll("[data-destination]").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      field("destination").value = link.dataset.destination;
-      field("destination").removeAttribute("aria-invalid");
-      const next = link.dataset.destination ? field("departure") : field("destination");
-      scrollToTarget(form, -100, () => next.focus({ preventScroll: true }));
-    });
-  });
-
   /* ------------------------------------------------------------------------
      No GSAP or reduced motion: static, fully visible page
      ------------------------------------------------------------------------ */
@@ -298,6 +224,7 @@
      ------------------------------------------------------------------------ */
   if (typeof window.Lenis !== "undefined") {
     lenis = new Lenis({ duration: 1.25, easing: (t) => 1 - Math.pow(1 - t, 4) });
+    window.__lenis = lenis; // the trail finder pauses scrolling while it hands off to your-hike/
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -306,6 +233,12 @@
   loader.done.then(() => {
     if (lenis) lenis.start();
     ScrollTrigger.refresh();
+    // Coming back from your-hike/ (#plan): land on the trail finder, pinned hero spacing included.
+    const target = location.hash.length > 1 && document.querySelector(location.hash);
+    if (target) {
+      if (lenis) lenis.scrollTo(target, { immediate: true, force: true });
+      else target.scrollIntoView();
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -315,7 +248,7 @@
       const target = id === "#top" ? 0 : document.querySelector(id);
       if (target === null) return;
       e.preventDefault();
-      scrollToTarget(target, id === "#book-form" ? -100 : 0);
+      scrollToTarget(target);
     });
   });
 
@@ -423,7 +356,7 @@
     });
   });
 
-  // booking banner: slow photographic drift
+  // trail finder banner: slow photographic drift
   gsap.fromTo(".book__media",
     { yPercent: -8, scale: 1.08 },
     {
