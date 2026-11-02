@@ -403,7 +403,7 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 .book__note { grid-column: 1 / -1; text-align: center; font-size: 12px; color: #5d6b79; }
 
 /* Crop helper for photos reused at different framings */
-.dest__card img {
+.dest__card img, .hike__media img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: var(--x, 50%) var(--y, 50%);
   transform: scale(var(--z, 1)); transform-origin: var(--x, 50%) var(--y, 50%);
@@ -447,6 +447,54 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 .dest__country { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255, 255, 255, 0.75); }
 .dest__name { margin-top: 6px; font-family: var(--font-display); font-weight: 500; font-size: clamp(24px, 2.3vw, 34px); line-height: 1.1; letter-spacing: -0.015em; }
 
+/* Featured hiking spots — 2×2 editorial grid with hairlines */
+.hikes { background: var(--navy-900); padding-top: clamp(64px, 10vh, 120px); }
+.hikes__head {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 32px;
+  padding-bottom: clamp(40px, 6vh, 64px);
+}
+.hikes__head .heading { max-width: 12ch; }
+.hikes__intro { max-width: 44ch; justify-self: end; color: var(--muted); font-size: 17px; line-height: 1.55; }
+
+.hikes__grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--hair); }
+.hike {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr); gap: clamp(20px, 2.6vw, 44px);
+  padding-block: clamp(32px, 4.4vw, 56px);
+  border-bottom: 1px solid var(--hair);
+}
+.hike:nth-child(odd) { padding-left: var(--edge); padding-right: clamp(24px, 3vw, 56px); }
+.hike:nth-child(even) { padding-right: var(--edge); padding-left: clamp(24px, 3vw, 56px); border-left: 1px solid var(--hair); }
+
+.hike__body { display: flex; flex-direction: column; min-width: 0; }
+.hike__title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(24px, 2.1vw, 34px); line-height: 1.08; letter-spacing: -0.025em;
+  max-width: 16ch;
+}
+.hike__price { margin-top: 12px; font-size: 17px; color: var(--muted); }
+.hike__price b { color: var(--white); font-weight: 600; }
+
+.hike__facts { margin-top: auto; padding-top: 32px; display: grid; gap: 10px; font-size: 13.5px; }
+.hike__facts li { display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--muted); }
+.hike__facts b { color: var(--white); font-weight: 500; }
+.hike__facts svg { flex: none; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.7; }
+.stars { flex: none; color: #e7b468; font-size: 12px; letter-spacing: 0.12em; }
+
+.hike__cta {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 24px; height: 48px; padding: 0 20px 0 22px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid var(--hair);
+  font-size: 14px; font-weight: 600;
+  transition: background-color 0.45s var(--ease), color 0.45s var(--ease), border-color 0.45s var(--ease);
+}
+.hike__cta svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.5s var(--ease); }
+.hike__cta:hover { background: var(--white); border-color: var(--white); color: var(--navy-900); }
+.hike__cta:hover svg { transform: translateX(4px); }
+
+.hike__media { position: relative; margin: 0; overflow: hidden; border-radius: 4px; aspect-ratio: 1 / 1.07; background: var(--navy-700); }
+.hike__media img { transition: scale 1.2s var(--ease); }
+.hike:hover .hike__media img { scale: 1.05; }
+
 /* Footer */
 .footer { background: var(--navy-900); padding-block: clamp(96px, 16vh, 180px) 40px; }
 .footer__mail {
@@ -465,6 +513,12 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   font-size: 13px; color: var(--muted);
 }
 .footer__bottom a:hover { color: var(--white); }
+.credits { margin-top: 20px; font-size: 12px; color: var(--muted); }
+.credits summary { cursor: pointer; width: fit-content; }
+.credits summary:hover { color: var(--white); }
+.credits ul { display: grid; gap: 6px; margin-top: 12px; }
+.credits a { text-decoration: underline; text-underline-offset: 2px; }
+.credits a:hover { color: var(--white); }
 
 /* --------------------------------------------------------------------------
    Responsive
@@ -476,11 +530,18 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   .fleet__row { grid-template-columns: 40px 1.4fr 1fr 1fr; }
   .fleet__row .fleet__meta:last-child { display: none; }
   .book__inner { grid-template-columns: 1fr; }
+  .hikes__grid { grid-template-columns: 1fr; }
+  .hike:nth-child(n) { padding-inline: var(--edge); border-left: 0; }
   .book__form { max-width: 520px; }
 }
 
 @media (max-width: 760px) {
   .dest__card { flex-basis: 80vw; }
+  .hikes__head { grid-template-columns: 1fr; }
+  .hikes__intro { justify-self: start; }
+  .hike { grid-template-columns: 1fr; }
+  .hike__media { order: -1; aspect-ratio: 4 / 3; }
+  .hike__facts { padding-top: 24px; }
   .nav { font-size: 13px; }
   .nav__contact { display: none; }
   .nav__links { gap: 18px; }

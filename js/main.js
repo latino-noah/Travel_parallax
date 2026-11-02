@@ -239,11 +239,11 @@
       `Return: ${v("return") || "One way"}`,
       `Adults: ${v("adults")}`,
       `Children: ${v("children")}`,
-      `Aircraft: ${v("aircraft")}`,
+      `Trip style: ${v("style")}`,
     ].join("\n");
     form.querySelector(".book__note").textContent = "Opening your email app…";
     window.location.href =
-      `mailto:noahda.c@outlook.com?subject=${encodeURIComponent(`Flight request — ${v("destination")}`)}` +
+      `mailto:noahda.c@outlook.com?subject=${encodeURIComponent(`Hiking request — ${v("destination")}`)}` +
       `&body=${encodeURIComponent(body)}`;
   });
 
@@ -269,9 +269,9 @@
   window.addEventListener("resize", updateDestArrows);
   updateDestArrows();
 
-  // Picking a destination fills in the booking form, scrolls there, then focuses the next field.
+  // Picking a destination or hike fills in the booking form, scrolls there, then focuses the next field.
   // Focus waits for the scroll: focusing a date input mid-animation makes the page jump.
-  destTrack.querySelectorAll("[data-destination]").forEach((link) => {
+  document.querySelectorAll("[data-destination]").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       field("destination").value = link.dataset.destination;
@@ -315,7 +315,7 @@
       const target = id === "#top" ? 0 : document.querySelector(id);
       if (target === null) return;
       e.preventDefault();
-      scrollToTarget(target);
+      scrollToTarget(target, id === "#book-form" ? -100 : 0);
     });
   });
 
