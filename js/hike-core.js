@@ -238,7 +238,7 @@
     const diff = option("difficulty", answers.difficulty).label.toLowerCase();
     const land = LANDSCAPE_NOUN[answers.landscape];
     const goal = option("goal", answers.goal).phrase;
-    return `You selected ${diff} ${land} trails and ${goal}, hiking ${option("group", answers.group).phrase}. ` +
+    return `You selected ${diff} ${land} trails and ${goal}, hiking ${option("group", answers.group).phrase} in ${option("weather", answers.weather).phrase}. ` +
       `This route offers ${lowerFirst(trail.terrain.replace(/\.$/, ""))}, rewarded by ${list(trail.viewpoints.slice(0, 2))}.`;
   }
 
@@ -267,6 +267,6 @@
   window.HikeFinder = {
     TRAILS, QUESTIONS, Store, rank, explain, summary, intro, gear, safety,
     question, option, trailById, photosOf, isComplete,
-    difficultyLabel, durationText, km, metres, primaryLandscape,
+    difficultyLabel, durationText, km, metres, primaryLandscape, typicalWeather,
   };
 })();

@@ -719,7 +719,7 @@
       key: "weather",
       title: "What weather do you like to hike in?",
       options: [
-        { value: "sunny", label: "Sunny and warm", note: "Blue skies, 20 °C and up", phrase: "sunny, warm days" },
+        { value: "sunny", label: "Sunny and warm", note: "Blue skies, 20 °C and up", phrase: "sunny, warm weather" },
         { value: "mild", label: "Mild and fresh", note: "Comfortable, around 10–20 °C", phrase: "mild, fresh weather" },
         { value: "cool", label: "Cool and moody", note: "Wind, mist and changing skies", phrase: "cool, moody weather" },
         { value: "cold", label: "Cold with snow", note: "Frosty air, snow underfoot", phrase: "cold and snow" },
