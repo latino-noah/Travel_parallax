@@ -903,11 +903,18 @@ window.HIKE_PHOTOS = {
  "triglav": [
   {
    "src": "assets/img/hikes/triglav-0.webp",
+   "alt": "The limestone north face of Triglav above the Vrata valley",
+   "credit": "MKrolik-WMF",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Triglav_north_face.jpg",
+   "hero": "assets/img/hikes/triglav-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/triglav-1.webp",
    "alt": "The Julian Alps and Lake Bohinj seen from above",
    "credit": "Carsten Steger",
    "license": "CC BY-SA 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Lake_Bohinj_(view_from_the_south).jpg",
-   "hero": "assets/img/hikes/triglav-0-2000.webp"
+   "page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Lake_Bohinj_(view_from_the_south).jpg"
   }
  ],
  "vintgar": [
@@ -1171,11 +1178,18 @@ window.HIKE_PHOTOS = {
  "abisko": [
   {
    "src": "assets/img/hikes/abisko-0.webp",
+   "alt": "Lapporten, the U-shaped valley near Abisko",
+   "credit": "Ximonic (Simo Räsänen)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lapporten_over_Tornetr%C3%A4sk,_Norrbotten,_Sweden,_2015_April.jpg",
+   "hero": "assets/img/hikes/abisko-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/abisko-1.webp",
    "alt": "Northern lights over the birch forest at Abisko",
    "credit": "Pavel.shyshkouski",
    "license": "CC BY-SA 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Aurora_in_Abisko_near_Tornetr%C3%A4sk.jpg",
-   "hero": "assets/img/hikes/abisko-0-2000.webp"
+   "page": "https://commons.wikimedia.org/wiki/File:Aurora_in_Abisko_near_Tornetr%C3%A4sk.jpg"
   }
  ],
  "karhunkierros": [
@@ -1337,11 +1351,18 @@ window.HIKE_PHOTOS = {
  "creux-du-van": [
   {
    "src": "assets/img/hikes/creux-du-van-0.webp",
-   "alt": "An ibex in front of the cliffs of the Creux du Van",
-   "credit": "Giles Laurent",
-   "license": "CC BY-SA 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:002_Wild_Alpine_Ibex_Swiss_Alps_and_Creux_du_Van_Photo_by_Giles_Laurent.jpg",
+   "alt": "A hiker on the rim of the Creux du Van cirque",
+   "credit": "kuhnmi (https://www.flickr.com/people/31176607@N05/)",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Creux_du_Van_cirque_in_Neuchatel_canton_in_Switzerland.jpg",
    "hero": "assets/img/hikes/creux-du-van-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/creux-du-van-1.webp",
+   "alt": "The curved cliffs of the Creux du Van",
+   "credit": "Loris 85",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2014-03-30_-_Creux_du_Van_173128.jpg"
   }
  ],
  "morskie-oko": [
@@ -1364,11 +1385,18 @@ window.HIKE_PHOTOS = {
  "slovak-paradise": [
   {
    "src": "assets/img/hikes/slovak-paradise-0.webp",
+   "alt": "Forested gorges of the Slovak Paradise",
+   "credit": "Fry72",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ihrik,_Letanovce,_okres_Spi%C5%A1sk%C3%A1_Nov%C3%A1_Ves,_Slovensk%C3%BD_raj,_Ko%C5%A1ick%C3%BD_kraj_02.jpg",
+   "hero": "assets/img/hikes/slovak-paradise-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/slovak-paradise-1.webp",
    "alt": "Hikers climbing ladders beside a waterfall in Suchá Belá",
    "credit": "Margoz",
    "license": "CC BY-SA 4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Such%C3%A1_Bel%C3%A1.jpg",
-   "hero": "assets/img/hikes/slovak-paradise-0-2000.webp"
+   "page": "https://commons.wikimedia.org/wiki/File:Such%C3%A1_Bel%C3%A1.jpg"
   }
  ],
  "ben-nevis": [
@@ -1481,6 +1509,886 @@ window.HIKE_PHOTOS = {
    "credit": "Saffron Blaze",
    "license": "CC BY-SA 3.0",
    "page": "https://commons.wikimedia.org/wiki/File:Durdle_Door_Dorset_Sunset.jpg"
+  }
+ ],
+ "retezat": [
+  {
+   "src": "assets/img/hikes/retezat-0.webp",
+   "alt": "A rocky path through the high Retezat mountains",
+   "credit": "Gugalcrom123",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Muntii_Retezat_01.jpg",
+   "hero": "assets/img/hikes/retezat-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/retezat-1.webp",
+   "alt": "Dwarf pine and peaks in Retezat National Park",
+   "credit": "Gugalcrom123",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Muntii_Retezat_02.jpg"
+  }
+ ],
+ "verdon": [
+  {
+   "src": "assets/img/hikes/verdon-0.webp",
+   "alt": "The turquoise Verdon river winding through its deep gorge",
+   "credit": "kallerna",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Verdon_Gorge_1.jpg",
+   "hero": "assets/img/hikes/verdon-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/verdon-1.webp",
+   "alt": "Limestone walls rising above the green Verdon",
+   "credit": "kallerna",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Verdon_Gorge_8.jpg"
+  }
+ ],
+ "calanques": [
+  {
+   "src": "assets/img/hikes/calanques-0.webp",
+   "alt": "Turquoise water between the white cliffs of a calanque",
+   "credit": "kallerna",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:En-Vau_calanque_1.jpg",
+   "hero": "assets/img/hikes/calanques-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/calanques-1.webp",
+   "alt": "The pebble beach of En-Vau from above",
+   "credit": "kallerna",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:En-Vau_calanque_10.jpg"
+  }
+ ],
+ "selvaggio-blu": [
+  {
+   "src": "assets/img/hikes/selvaggio-blu-0.webp",
+   "alt": "The Pedra Longa pinnacle rising from the sea",
+   "credit": "fotografia di Rosanna C.",
+   "license": "CC BY 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Baunei-Pedra_Longa.jpg",
+   "hero": "assets/img/hikes/selvaggio-blu-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/selvaggio-blu-1.webp",
+   "alt": "Limestone pinnacles on the Baunei coast",
+   "credit": "Gianni Careddu",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Baunei_-_Pedra_Longa_(2).JPG"
+  }
+ ],
+ "goloritze": [
+  {
+   "src": "assets/img/hikes/goloritze-0.webp",
+   "alt": "Cala Goloritzé's white beach and turquoise water",
+   "credit": "Mentnafunangann",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cala_Goloritz%C3%A9_1.JPG",
+   "hero": "assets/img/hikes/goloritze-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/goloritze-1.webp",
+   "alt": "Clear blue sea along the Gulf of Orosei",
+   "credit": "delaere",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cala_Goloritze_o.jpg"
+  }
+ ],
+ "camino-frances": [
+  {
+   "src": "assets/img/hikes/camino-frances-0.webp",
+   "alt": "An old stone bridge on the Camino in Galicia",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Puente_medieval_sobre_el_r%C3%ADo_Celeiro,_Sarria,_Camino_de_Santiago,_Lugo,_Espa%C3%B1a,_2015-09-19,_DD_07.jpg",
+   "hero": "assets/img/hikes/camino-frances-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/camino-frances-1.webp",
+   "alt": "A Camino waymark in the hills",
+   "credit": "Simon Burchell",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Camino_de_Santiago,_Campobecerros_03.jpg"
+  }
+ ],
+ "cares": [
+  {
+   "src": "assets/img/hikes/cares-0.webp",
+   "alt": "The Cares path running beside a water channel in the gorge",
+   "credit": "Simon Burchell",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ruta_de_Cares_049.jpg",
+   "hero": "assets/img/hikes/cares-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/cares-1.webp",
+   "alt": "The canal and railings along the Cares gorge",
+   "credit": "Simon Burchell",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ruta_de_Cares_062.jpg"
+  }
+ ],
+ "ordesa": [
+  {
+   "src": "assets/img/hikes/ordesa-0.webp",
+   "alt": "The striped cliffs of the Ordesa valley",
+   "credit": "Falk2",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:J20_921_Valle_de_Ordesa.jpg",
+   "hero": "assets/img/hikes/ordesa-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/ordesa-1.webp",
+   "alt": "Looking down the Ordesa canyon to the mountains",
+   "credit": "Martin Stiburek",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ordesa_Valley_from_Mirador_de_Calcilarruego.jpg"
+  }
+ ],
+ "aiguestortes": [
+  {
+   "src": "assets/img/hikes/aiguestortes-0.webp",
+   "alt": "Estany de Sant Maurici below the Encantats",
+   "credit": "Josep Renalias",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Estany_de_Sant_Maurici.JPG",
+   "hero": "assets/img/hikes/aiguestortes-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/aiguestortes-1.webp",
+   "alt": "Pine forest and the Encantats above a lake",
+   "credit": "Pimlico27",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Estany_de_Ratera,_Aig%C3%BCestortes_i_Estany_de_Sant_Maurici_National_Park.jpg"
+  }
+ ],
+ "mulhacen": [
+  {
+   "src": "assets/img/hikes/mulhacen-0.webp",
+   "alt": "The snowy Sierra Nevada around Mulhacén",
+   "credit": "Juanjosepascua",
+   "license": "CC BY-SA 3.0 es",
+   "page": "https://commons.wikimedia.org/wiki/File:Alcazaba,_Punta_de_la_Cornisa_y_Mulhac%C3%A9n_3.479_m.jpg",
+   "hero": "assets/img/hikes/mulhacen-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/mulhacen-1.webp",
+   "alt": "A stone refuge on the bare slopes near the summit",
+   "credit": "Torobravo2011",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:110920_Westwand_Mulhac%C3%A9n_und_Ref.Caldera-jpg.jpg"
+  }
+ ],
+ "rota-vicentina": [
+  {
+   "src": "assets/img/hikes/rota-vicentina-0.webp",
+   "alt": "Wild beaches and cliffs on the Rota Vicentina",
+   "credit": "21milo21",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Praia_do_Malh%C3%A3o_and_beautiful_view_with_flowers.jpg",
+   "hero": "assets/img/hikes/rota-vicentina-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/rota-vicentina-1.webp",
+   "alt": "Atlantic cliffs along the Fishermen's Trail",
+   "credit": "21milo21",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Spectacular_view_of_costline_in_Portugal.jpg"
+  }
+ ],
+ "caldeirao-verde": [
+  {
+   "src": "assets/img/hikes/caldeirao-verde-0.webp",
+   "alt": "The Caldeirão Verde waterfall falling into a green crater",
+   "credit": "Vimacopeca",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Caldeir%C3%A3o_Verde_Waterfall.jpg",
+   "hero": "assets/img/hikes/caldeirao-verde-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/caldeirao-verde-1.webp",
+   "alt": "The narrow levada path through laurel forest",
+   "credit": "Patrice78500",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Levada_do_Caldeir%C3%A3o_Verde_-_pont.jpg"
+  }
+ ],
+ "pico-ruivo": [
+  {
+   "src": "assets/img/hikes/pico-ruivo-0.webp",
+   "alt": "Madeira's volcanic peaks rising above a sea of clouds",
+   "credit": "VillageHero from Ulm, Germany",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:View_to_Pico_Ruivo_from_Pico_Arieiro_(37389030254).jpg",
+   "hero": "assets/img/hikes/pico-ruivo-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/pico-ruivo-1.webp",
+   "alt": "The path to the summit of Pico Ruivo",
+   "credit": "The Kopf System",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Pico_Ruivo_Peak.jpg"
+  }
+ ],
+ "sete-cidades": [
+  {
+   "src": "assets/img/hikes/sete-cidades-0.webp",
+   "alt": "The twin lakes in the Sete Cidades crater",
+   "credit": "StephanieSilvaabreu",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Caldeira_das_Sete_Cidades,_A%C3%A7ores_2.jpg",
+   "hero": "assets/img/hikes/sete-cidades-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/sete-cidades-1.webp",
+   "alt": "Sete Cidades village beside the crater lakes",
+   "credit": "Descobrimentos novos",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Caldeira_das_Sete_Cidades_auf_Sao_Miguel.jpg"
+  }
+ ],
+ "teide": [
+  {
+   "src": "assets/img/hikes/teide-0.webp",
+   "alt": "Volcanic craters and lava fields seen from Teide",
+   "credit": "Flocci Nivis",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:20250708_Teide_03.jpg",
+   "hero": "assets/img/hikes/teide-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/teide-1.webp",
+   "alt": "Colourful volcanic rock near the summit",
+   "credit": "H. Zell",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Pico_del_Teide_-_Tenerife_01.jpg"
+  }
+ ],
+ "vikos": [
+  {
+   "src": "assets/img/hikes/vikos-0.webp",
+   "alt": "The deep, green Vikos Gorge",
+   "credit": "Pudelek",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vikos_Gorge_(%CE%A6%CE%B1%CF%81%CF%81%CE%AC%CE%B3%CE%B3%CE%B9_%CF%84%CE%BF%CF%85_%CE%92%CE%AF%CE%BA%CE%BF%CF%85)_by_Pudelek.JPG",
+   "hero": "assets/img/hikes/vikos-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/vikos-1.webp",
+   "alt": "Looking along the Vikos Gorge",
+   "credit": "Calistemon",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vikos_Gorge_seen_from_Vikos_Gorge_View_Point,_September_2022_01.jpg"
+  }
+ ],
+ "olympus": [
+  {
+   "src": "assets/img/hikes/olympus-0.webp",
+   "alt": "The rocky summit of Mount Olympus",
+   "credit": "Stolbovsky",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mytikas_peak_02.jpg",
+   "hero": "assets/img/hikes/olympus-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/olympus-1.webp",
+   "alt": "The high peaks of Olympus above the pine forest",
+   "credit": "Falk2",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:J26_655_M%C3%BDtikas.jpg"
+  }
+ ],
+ "meteora": [
+  {
+   "src": "assets/img/hikes/meteora-0.webp",
+   "alt": "Monasteries on the sandstone pillars of Meteora at dusk",
+   "credit": "Ioannis Ioannidis",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mystic_land_METEORA.jpg",
+   "hero": "assets/img/hikes/meteora-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/meteora-1.webp",
+   "alt": "The Meteora rocks above the lights of Kalambaka",
+   "credit": "Argiriskaramouzas",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%CE%9C%CE%B5%CF%84%CE%B5%CF%89%CF%81%CE%B1_by_night.jpg"
+  }
+ ],
+ "peaks-balkans": [
+  {
+   "src": "assets/img/hikes/peaks-balkans-0.webp",
+   "alt": "The turquoise Valbona river below the Accursed Mountains",
+   "credit": "Albinfo",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Valbona_River_below_BC_(WPWTR17).jpg",
+   "hero": "assets/img/hikes/peaks-balkans-0-2000.webp"
+  }
+ ],
+ "valbona-theth": [
+  {
+   "src": "assets/img/hikes/valbona-theth-0.webp",
+   "alt": "The Theth valley below limestone peaks",
+   "credit": "Liridon",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kisha_e_Thethit_-_2018_(8).jpg",
+   "hero": "assets/img/hikes/valbona-theth-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/valbona-theth-1.webp",
+   "alt": "Green slopes and peaks above Theth",
+   "credit": "DGA05",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Theth_3.jpg"
+  }
+ ],
+ "durmitor": [
+  {
+   "src": "assets/img/hikes/durmitor-0.webp",
+   "alt": "The rocky summit of Bobotov Kuk",
+   "credit": "Goran.Smith2",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bobotov_Kuk.jpg",
+   "hero": "assets/img/hikes/durmitor-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/durmitor-1.webp",
+   "alt": "The karst landscape of the Durmitor massif",
+   "credit": "Emil Joanović",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Minin_Bogaz_i_Bobotov_Kuk_-_panoramio.jpg"
+  }
+ ],
+ "etna": [
+  {
+   "src": "assets/img/hikes/etna-0.webp",
+   "alt": "Etna's summit crater smoking under a blue sky",
+   "credit": "The Cosmonaut",
+   "license": "CC BY-SA 2.5 ca",
+   "page": "https://commons.wikimedia.org/wiki/File:Etna_Southeast_Crater_eruption_2022-05-17.jpg",
+   "hero": "assets/img/hikes/etna-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/etna-1.webp",
+   "alt": "Black lava and craters high on Etna",
+   "credit": "Cayambe",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mount_Etna_2024_22_%E2%80%93_secondary_crater.jpg"
+  }
+ ],
+ "stromboli": [
+  {
+   "src": "assets/img/hikes/stromboli-0.webp",
+   "alt": "The volcanic island of Stromboli from the air",
+   "credit": "Carsten Steger",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Stromboli_(view_from_the_northeast).jpg",
+   "hero": "assets/img/hikes/stromboli-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/stromboli-1.webp",
+   "alt": "Fishing boats on Stromboli's black-sand beach",
+   "credit": "Norbert Nagel",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Island_Stromboli_-_Italy_-_July_18th_2013_-_06.jpg"
+  }
+ ],
+ "corno-grande": [
+  {
+   "src": "assets/img/hikes/corno-grande-0.webp",
+   "alt": "Corno Grande, the highest peak of the Apennines",
+   "credit": "TeKappa",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Corno_Grande_e_Corno_Piccolo.jpg",
+   "hero": "assets/img/hikes/corno-grande-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/corno-grande-1.webp",
+   "alt": "The Campo Imperatore plateau below Corno Grande",
+   "credit": "Bouke ten Cate",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Campo_Imperatore_with_il_Corno_Grande_in_the_background_-_Gran_Sasso_2.jpg"
+  }
+ ],
+ "breche-roland": [
+  {
+   "src": "assets/img/hikes/breche-roland-0.webp",
+   "alt": "The Brèche de Roland, a gap in a wall of rock",
+   "credit": "Tigerente",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Br%C3%A8che_de_Roland_20060821b.jpg",
+   "hero": "assets/img/hikes/breche-roland-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/breche-roland-1.webp",
+   "alt": "The Brèche seen from the snowfield below",
+   "credit": "Tigerente",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Br%C3%A8che_de_Roland_20060821f.jpg"
+  }
+ ],
+ "lac-gaube": [
+  {
+   "src": "assets/img/hikes/lac-gaube-0.webp",
+   "alt": "Lac de Gaube reflecting the Vignemale valley",
+   "credit": "Orlando Mouchel",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Gaube_Lake_Mirror.jpg",
+   "hero": "assets/img/hikes/lac-gaube-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/lac-gaube-1.webp",
+   "alt": "The clear water of Lac de Gaube",
+   "credit": "lombiedezombie@hotma…",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lac_de_Gaube_-_panoramio.jpg"
+  }
+ ],
+ "lycian-way": [
+  {
+   "src": "assets/img/hikes/lycian-way-0.webp",
+   "alt": "Scrubland and sea views on the Lycian Way",
+   "credit": "Alexkom000",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2023-11-04_Lycian_Way_near_Ka%C5%9F.jpg",
+   "hero": "assets/img/hikes/lycian-way-0-2000.webp"
+  }
+ ],
+ "inca-trail": [
+  {
+   "src": "assets/img/hikes/inca-trail-0.webp",
+   "alt": "Inca terraces in the valley at the start of the Inca Trail",
+   "credit": "Chuck Moravec",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Inca_Trail_Patallacta_1.jpg",
+   "hero": "assets/img/hikes/inca-trail-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/inca-trail-1.webp",
+   "alt": "The original Inca stone path",
+   "credit": "Mx._Granger",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Part_of_the_Inca_Trail.jpg"
+  }
+ ],
+ "fitz-roy": [
+  {
+   "src": "assets/img/hikes/fitz-roy-0.webp",
+   "alt": "Laguna de los Tres below the towers of Fitz Roy",
+   "credit": "Rodrigo Menezes (Ironman br)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Laguna_de_Los_Tres_Panorama.jpg",
+   "hero": "assets/img/hikes/fitz-roy-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/fitz-roy-1.webp",
+   "alt": "The glacial lake below Fitz Roy under heavy clouds",
+   "credit": "Almonroth",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Laguna_de_los_Tres_color.jpg"
+  }
+ ],
+ "angels-landing": [
+  {
+   "src": "assets/img/hikes/angels-landing-0.webp",
+   "alt": "Zion Canyon from high on Angels Landing",
+   "credit": "Gauravbharadwajm",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Angels-Landing-zion.jpg",
+   "hero": "assets/img/hikes/angels-landing-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/angels-landing-1.webp",
+   "alt": "Red cliffs of Zion framed by a pine",
+   "credit": "Tobias Alt",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Angels_Landing.jpg"
+  }
+ ],
+ "bright-angel": [
+  {
+   "src": "assets/img/hikes/bright-angel-0.webp",
+   "alt": "The layered walls of the Grand Canyon",
+   "credit": "brewbooks from near Seattle, USA",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Grand_canyon_-_walk_to_Plateau_Point_-_Flickr_-_brewbooks_(4).jpg",
+   "hero": "assets/img/hikes/bright-angel-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/bright-angel-1.webp",
+   "alt": "The trail across the plateau to Plateau Point",
+   "credit": "Brian MacIntosh",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Plateau_Point_Trail_toward_Colorado_River,_Grand_Canyon_National_Park.jpg"
+  }
+ ],
+ "narrows": [
+  {
+   "src": "assets/img/hikes/narrows-0.webp",
+   "alt": "The Virgin River between the walls of the Narrows",
+   "credit": "Jason",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Zion_-_The_Narrows.jpg",
+   "hero": "assets/img/hikes/narrows-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/narrows-1.webp",
+   "alt": "Towering canyon walls in Zion",
+   "credit": "Redditaddict69",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Zion_Narrows_2013.jpg"
+  }
+ ],
+ "lake-agnes": [
+  {
+   "src": "assets/img/hikes/lake-agnes-0.webp",
+   "alt": "Lake Agnes reflecting the peaks above Lake Louise",
+   "credit": "Florian Fuchs",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lake_Agnes_im_Banff_National_Park.jpg",
+   "hero": "assets/img/hikes/lake-agnes-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/lake-agnes-1.webp",
+   "alt": "Still water at Lake Agnes below steep cliffs",
+   "credit": "Mikael Espensen Mespensen24",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lake_Agnes_AB.jpg"
+  }
+ ],
+ "west-coast-trail": [
+  {
+   "src": "assets/img/hikes/west-coast-trail-0.webp",
+   "alt": "Hikers on a beach section of the West Coast Trail",
+   "credit": "Unknown",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:West_Coast_Trail_Beach_Hiking_2007.JPG",
+   "hero": "assets/img/hikes/west-coast-trail-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/west-coast-trail-1.webp",
+   "alt": "Rock shelf and surf at sunset on the Pacific coast",
+   "credit": "Paxson Woelber",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_quaint_sunset._West_Coast_Trail,_Vancouver_Island,_BC,_Canada_(6404595293).jpg"
+  }
+ ],
+ "tongariro": [
+  {
+   "src": "assets/img/hikes/tongariro-0.webp",
+   "alt": "The Emerald Lakes below the Red Crater",
+   "credit": "Du Hugin Skulblaka",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Emerald_Lakes,_NZ.jpg",
+   "hero": "assets/img/hikes/tongariro-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/tongariro-1.webp",
+   "alt": "The volcanic landscape of the Tongariro Crossing",
+   "credit": "Marcus Holland-Moritz",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Emerald_Lakes,_New_Zealand.jpg"
+  }
+ ],
+ "milford": [
+  {
+   "src": "assets/img/hikes/milford-0.webp",
+   "alt": "The Clinton valley on the Milford Track",
+   "credit": "AlasdairW",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Milford_Track_Mackinnon_Pass.jpg",
+   "hero": "assets/img/hikes/milford-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/milford-1.webp",
+   "alt": "A tarn near Mackinnon Pass",
+   "credit": "AlasdairW",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mackinnon_Pass_Tarn.jpg"
+  }
+ ],
+ "roys-peak": [
+  {
+   "src": "assets/img/hikes/roys-peak-0.webp",
+   "alt": "The ridge of Roys Peak above Lake Wānaka",
+   "credit": "Jingwei Ke lenscapism",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sunrise_at_Roy%27s_Peak_(Unsplash).jpg",
+   "hero": "assets/img/hikes/roys-peak-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/roys-peak-1.webp",
+   "alt": "Lake Wānaka from the slopes of Roys Peak",
+   "credit": "Julrob Photography",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Roys_Peak_Mountain_near_Lake_Wanaka.jpg"
+  }
+ ],
+ "annapurna": [
+  {
+   "src": "assets/img/hikes/annapurna-0.webp",
+   "alt": "Snow-capped peaks around the Thorong La",
+   "credit": "Roman Yahodka",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Thorong_La_as_seen_from_Chulu_West_high_camp.jpg",
+   "hero": "assets/img/hikes/annapurna-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/annapurna-1.webp",
+   "alt": "High Himalayan valleys on the Annapurna Circuit",
+   "credit": "Vyacheslav Argenberg",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Muktinath_Valley,_View_of_Thorong_La_Pass,_Mountains,_Nepal.jpg"
+  }
+ ],
+ "kalalau": [
+  {
+   "src": "assets/img/hikes/kalalau-0.webp",
+   "alt": "The green cliffs of the Nā Pali Coast",
+   "credit": "California Cow from Seattle, USA",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kalalau_trail_(22324808190).jpg",
+   "hero": "assets/img/hikes/kalalau-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/kalalau-1.webp",
+   "alt": "A red-earth path through tropical forest",
+   "credit": "California Cow from Seattle, USA",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kalalau_trail_(22523903911).jpg"
+  }
+ ],
+ "table-mountain": [
+  {
+   "src": "assets/img/hikes/table-mountain-0.webp",
+   "alt": "The 'table cloth' cloud spilling over Table Mountain",
+   "credit": "Dietmar Rabich",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA),_Table_Mountain_--_2024_--_3437.jpg",
+   "hero": "assets/img/hikes/table-mountain-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/table-mountain-1.webp",
+   "alt": "Fynbos and sandstone on top of Table Mountain",
+   "credit": "Dietmar Rabich",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA),_Table_Mountain_--_2024_--_2825.jpg"
+  }
+ ],
+ "toubkal": [
+  {
+   "src": "assets/img/hikes/toubkal-0.webp",
+   "alt": "Hikers below the snowy peaks of the Toubkal massif",
+   "credit": "Kurinurm",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Jebel_Toubkal_and_a_group_of_hikers.jpg",
+   "hero": "assets/img/hikes/toubkal-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/toubkal-1.webp",
+   "alt": "The High Atlas above Imlil",
+   "credit": "Toni Wöhrl",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Spring_blossom_Toubkal_National_Park.jpg"
+  }
+ ],
+ "kumano-kodo": [
+  {
+   "src": "assets/img/hikes/kumano-kodo-0.webp",
+   "alt": "A stone-paved section of the Kumano Kodo in cedar forest",
+   "credit": "Nekosuki",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kumano_Kodo_World_heritage_Ohgumotorigoe_%E7%86%8A%E9%87%8E%E5%8F%A4%E9%81%93_%E5%A4%A7%E9%9B%B2%E5%8F%96%E8%B6%8A148.JPG",
+   "hero": "assets/img/hikes/kumano-kodo-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/kumano-kodo-1.webp",
+   "alt": "Tall cedars along the pilgrimage path",
+   "credit": "VKaeru",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kumano_Kodo_forest.jpg"
+  }
+ ],
+ "blue-mountains": [
+  {
+   "src": "assets/img/hikes/blue-mountains-0.webp",
+   "alt": "Forested canyons and cliffs of the Blue Mountains",
+   "credit": "Hal 1945",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Evans_Lookout,_Grand_Canyon_Track,_Blue_Mountains,_NSW.JPG",
+   "hero": "assets/img/hikes/blue-mountains-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/blue-mountains-1.webp",
+   "alt": "Stone steps through tree ferns",
+   "credit": "Maurice van Creij",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Track_-_panoramio_(1).jpg"
+  }
+ ],
+ "overland": [
+  {
+   "src": "assets/img/hikes/overland-0.webp",
+   "alt": "Cradle Mountain behind the Dove Lake boatshed",
+   "credit": "Thennicke",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Boat_shed_and_Cradle_Mountain_at_Dove_Lake,_Tas.jpg",
+   "hero": "assets/img/hikes/overland-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/overland-1.webp",
+   "alt": "Cradle Mountain above Dove Lake",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Parque_Nacional_Cradle_Mountain-Tasmania-Australia02.JPG"
+  }
+ ],
+ "vinicunca": [
+  {
+   "src": "assets/img/hikes/vinicunca-0.webp",
+   "alt": "The striped slopes of Rainbow Mountain",
+   "credit": "Steve FUNG",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vinicunca_(Rainbow_Mountain).jpg",
+   "hero": "assets/img/hikes/vinicunca-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/vinicunca-1.webp",
+   "alt": "Hikers at the top of Vinicunca",
+   "credit": "MareikeHeuer(WMDE)",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rainbow_Mountain_Peru.jpg"
+  }
+ ],
+ "laguna-69": [
+  {
+   "src": "assets/img/hikes/laguna-69-0.webp",
+   "alt": "Laguna 69 below glaciated cliffs",
+   "credit": "Renata Maria Cristina",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Laguna_69,_no_desfiladeiro_Demanda_do_Parque_Nacional_Huascar%C3%A1n_03.jpg",
+   "hero": "assets/img/hikes/laguna-69-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/laguna-69-1.webp",
+   "alt": "The turquoise water of Laguna 69",
+   "credit": "Christian Cruzado",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Laguna_69,_Yungay_-_Huaraz_-_Per%C3%BA.jpg"
+  }
+ ],
+ "haute-route": [
+  {
+   "src": "assets/img/hikes/haute-route-0.webp",
+   "alt": "A turquoise alpine lake above Arolla on the Haute Route",
+   "credit": "Markus Bernet",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lac_Bleu_(Arolla).jpg",
+   "hero": "assets/img/hikes/haute-route-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/haute-route-1.webp",
+   "alt": "Snowy peaks at the head of the Arolla valley",
+   "credit": "Virginny88",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Arolla_hiver.jpg"
+  }
+ ],
+ "zugspitze": [
+  {
+   "src": "assets/img/hikes/zugspitze-0.webp",
+   "alt": "The Wetterstein wall and Zugspitze above the Eibsee",
+   "credit": "Dguendel",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Grainau,_Eibsee,_Zugspitze_und_Ludwigsinsel.JPG",
+   "hero": "assets/img/hikes/zugspitze-0-2000.webp"
+  }
+ ],
+ "glymur": [
+  {
+   "src": "assets/img/hikes/glymur-0.webp",
+   "alt": "Glymur waterfall plunging into its mossy canyon",
+   "credit": "Jabbi",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Glymur_pan_1-10-08.JPG",
+   "hero": "assets/img/hikes/glymur-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/glymur-1.webp",
+   "alt": "The cliffs and falls of Glymur from above",
+   "credit": "Ivo Kruusamägi",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Glymur_in_Iceland.jpg"
+  }
+ ],
+ "rheinsteig": [
+  {
+   "src": "assets/img/hikes/rheinsteig-0.webp",
+   "alt": "Burg Katz above the Rhine gorge near the Loreley",
+   "credit": "Jörg Braukmann",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Burg_Katz_und_Loreley.jpg",
+   "hero": "assets/img/hikes/rheinsteig-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/rheinsteig-1.webp",
+   "alt": "The Loreley rock above the Rhine",
+   "credit": "Dirk Schmidt (Celsius auf Wikivoyage)",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Loreley_rhine_valley_d_schmidt_08_07.jpg"
+  }
+ ],
+ "rysy": [
+  {
+   "src": "assets/img/hikes/rysy-0.webp",
+   "alt": "Morskie Oko and Czarny Staw seen from Rysy",
+   "credit": "Michal Klajban",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vysok%C3%A9_Tatry,_v%C3%BDhled_z_vrcholu_Rysy,_z%C3%A1%C5%99%C3%AD_2011_(29).JPG",
+   "hero": "assets/img/hikes/rysy-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/rysy-1.webp",
+   "alt": "Jagged High Tatra ridges from the summit of Rysy",
+   "credit": "Michal Klajban",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vysok%C3%A9_Tatry,_v%C3%BDhled_z_vrcholu_Rysy,_z%C3%A1%C5%99%C3%AD_2011_(30).JPG"
+  }
+ ],
+ "paklenica": [
+  {
+   "src": "assets/img/hikes/paklenica-0.webp",
+   "alt": "The Velika Paklenica canyon below the Velebit peaks",
+   "credit": "Lindsey Nicholson",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Velika_Paklenica.jpg",
+   "hero": "assets/img/hikes/paklenica-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/paklenica-1.webp",
+   "alt": "Limestone walls of Paklenica National Park",
+   "credit": "Pudelek (Marcin Szala)",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nacionalni_park_Paklenica_-_Velika_Paklenica.JPG"
+  }
+ ],
+ "abel-tasman": [
+  {
+   "src": "assets/img/hikes/abel-tasman-0.webp",
+   "alt": "Golden sand and turquoise water at Torrent Bay",
+   "credit": "Oren Rozen",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:NZ310315_Abel_Tasman_Torrent_Bay_03.jpg",
+   "hero": "assets/img/hikes/abel-tasman-0-2000.webp"
+  },
+  {
+   "src": "assets/img/hikes/abel-tasman-1.webp",
+   "alt": "A bay seen through the coastal bush of Abel Tasman",
+   "credit": "David Broad",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Abel_Tasman_trail,_National_Park,_South_Island,_New_Zealand_-_panoramio_(3).jpg"
   }
  ]
 };
