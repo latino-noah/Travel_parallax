@@ -69,7 +69,9 @@
     $(".yh-body").hidden = false;
 
     // A. Hero
-    if (photos[0]) setHero(photos[0]);
+    // Trails without their own photos get a neutral sky and no gallery.
+    setHero(photos[0] || { src: `${BASE}assets/img/sky-1440.webp`, alt: "" });
+    $(".yh-gallery").hidden = !photos.length;
     $(".yh-hero__title").textContent = trail.name;
     $(".yh-hero__where").textContent = `${trail.destination} · ${trail.country}`;
     $(".yh-hero__intro").textContent = HF.intro(trail, answers);
