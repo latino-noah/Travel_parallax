@@ -13,7 +13,6 @@
 .curtain__label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .js-curtain [data-hero] { opacity: 0; }
 
-.yh-nav { position: absolute; }
 
 /* Buttons */
 .btn {

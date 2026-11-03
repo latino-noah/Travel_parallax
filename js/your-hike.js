@@ -318,11 +318,6 @@
       yPercent: -12, opacity: 0.2, ease: "none",
       scrollTrigger: { trigger: ".yh-hero", start: "30% top", end: "bottom top", scrub: true },
     });
-    gsap.to(".nav", {
-      opacity: 0, y: -16, ease: "none",
-      scrollTrigger: { trigger: ".yh-hero", start: "top top", end: "+=25%", scrub: true },
-    });
-
     const fades = gsap.utils.toArray("[data-fade]");
     gsap.set(fades, { y: 40, opacity: 0 });
     ScrollTrigger.batch(fades, {

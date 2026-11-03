@@ -12,6 +12,7 @@
   const title = document.querySelector(".hero__title");
   const titleInner = title.querySelector(".hero__title-inner");
   const nav = document.querySelector(".nav");
+  let navBottom = 0;
 
   // Natural size of the mountain photo and where its main summit starts
   // (measured from assets/mountain3.png: top of the peak at 44.0% height, 50.7% width).
@@ -56,7 +57,8 @@
     const peakY = (vh - imgH) / 2 + imgH * PEAK_Y;
 
     // 4. Baseline sits just below the summit so the rock rises through the letters.
-    const navBottom = nav.offsetTop + nav.offsetHeight;
+    // Measured in its resting state: the stuck header (js/nav.js) is shorter.
+    if (!nav.classList.contains("is-stuck")) navBottom = nav.offsetTop + nav.offsetHeight;
     let baseline = peakY + capH * PEAK_OVERLAP;
     baseline = Math.max(baseline, navBottom + 24 + capH);
     baseline = Math.min(baseline, vh * 0.7);
@@ -311,12 +313,6 @@
     .to(".hero__ui", { opacity: 0, y: () => -vh() * 0.04, duration: 0.25 }, 0)
     // dusk settles over the scene and hands off to the next section
     .to(".hero__fade", { opacity: 1, duration: 0.55, ease: "power1.inOut" }, 0.45);
-
-  // nav leaves with the interface
-  gsap.to(nav, {
-    opacity: 0, y: -16, ease: "none",
-    scrollTrigger: { trigger: ".hero", start: "top top", end: "+=25%", scrub: true },
-  });
 
   /* ------------------------------------------------------------------------
      Section reveals

@@ -117,11 +117,19 @@ html.is-loading, html.is-loading body { overflow: hidden; }
    Navigation
    -------------------------------------------------------------------------- */
 .nav {
-  position: absolute; inset: 0 0 auto 0; z-index: 50;
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
   display: flex; justify-content: space-between; align-items: center; gap: 24px;
   padding: clamp(22px, 5vh, 52px) var(--gutter) 0;
   font-size: 14px; font-weight: 600; letter-spacing: 0.005em;
+  border-bottom: 1px solid transparent;
+  transition: translate 0.5s var(--ease), background-color 0.5s var(--ease), border-color 0.5s var(--ease), padding 0.5s var(--ease);
 }
+/* Past the top of the page: solid bar that slides away on scroll down (js/nav.js) */
+.nav.is-stuck {
+  padding-block: 18px; background: rgba(5, 15, 28, 0.85); border-bottom-color: var(--hair);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.nav.is-hidden { translate: 0 -110%; }
 .nav__links, .nav__contact { display: flex; gap: clamp(20px, 2.6vw, 40px); }
 .nav a { position: relative; padding-block: 4px; }
 .nav a::after {
