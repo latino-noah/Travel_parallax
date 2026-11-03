@@ -194,6 +194,23 @@
 .more__cta svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.5s var(--ease); }
 .more__card button:hover .more__cta svg { transform: translateX(4px); }
 
+/* Booking links */
+.yh-book { background: var(--navy-900); padding-top: 0; }
+.booking { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 1.6vw, 24px); }
+.booking__item a {
+  display: flex; flex-direction: column; height: 100%; padding: clamp(20px, 2vw, 30px); border-radius: 8px;
+  background: var(--navy-700); border: 1px solid rgba(255, 255, 255, 0.08); color: var(--white);
+  transition: background-color 0.45s var(--ease), border-color 0.45s var(--ease);
+}
+.booking__item a:hover { background: var(--navy-800); border-color: rgba(255, 255, 255, 0.4); }
+.booking__kind { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255, 255, 255, 0.75); }
+.booking__site { margin-top: 6px; font-family: var(--font-display); font-weight: 500; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.015em; }
+.booking__text { margin-top: 10px; font-size: 14px; line-height: 1.5; color: rgba(255, 255, 255, 0.75); }
+.booking__cta { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 18px; font-size: 13px; font-weight: 600; }
+.booking__cta svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.5s var(--ease); }
+.booking__item a:hover .booking__cta svg { transform: translateX(4px); }
+.yh-book .yh-note { margin-top: 24px; }
+
 /* G. Call to action */
 .yh-cta { position: relative; overflow: hidden; min-height: 80vh; display: flex; align-items: center; padding-block: clamp(110px, 16vh, 180px); background: var(--navy-900); }
 .yh-cta__media { position: absolute; inset: -12% 0; z-index: 0; will-change: transform; }
@@ -230,6 +247,7 @@
   .expect__num { margin-bottom: 24px; }
   .route { grid-template-columns: 1fr; }
   .more { grid-template-columns: 1fr 1fr; }
+  .booking { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -254,6 +272,7 @@
   .gallery__item--1 .gallery__frame { aspect-ratio: 16 / 10; height: auto; }
   .route__facts div { grid-template-columns: 1fr; gap: 6px; }
   .more { grid-template-columns: 1fr; }
+  .booking { grid-template-columns: 1fr; }
   .more__card button { aspect-ratio: 4 / 3.4; }
   .yh-cta { min-height: 0; }
   .yh-cta__buttons { flex-direction: column; align-items: stretch; }

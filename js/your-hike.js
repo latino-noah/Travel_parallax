@@ -154,7 +154,7 @@
       return `
         <li class="more__card" data-fade>
           <button type="button" data-trail="${id}">
-            <span class="more__media">${p ? `<img src="${BASE + p.src}" alt="" loading="lazy" decoding="async">` : ""}</span>
+            <span class="more__media"><img src="${p ? BASE + p.src : `${BASE}assets/img/sky-1440.webp`}" alt="" loading="lazy" decoding="async"></span>
             <span class="more__match">${percent}% match</span>
             <span class="more__country">${esc(t.country)}</span>
             <span class="more__name">${esc(t.name)}</span>
@@ -163,6 +163,25 @@
           </button>
         </li>`;
     }).join("");
+
+    // Booking links
+    const q = encodeURIComponent;
+    const where = `${trail.destination}, ${trail.country.split(" · ")[0]}`;
+    const booking = [
+      ["Stay", "Booking.com", `Hotels, huts and guesthouses near ${trail.destination}.`, `https://www.booking.com/searchresults.html?ss=${q(where)}`],
+      ["Fly", "Google Flights", "Compare flight prices and find the cheapest dates.", `https://www.google.com/travel/flights?q=${q(`Flights to ${where}`)}`],
+      ["Guided tours", "GetYourGuide", `Guided hikes, transfers and tickets for ${trail.name}.`, `https://www.getyourguide.com/s/?q=${q(trail.name)}`],
+      ["Activities", "Viator", "More tours and day trips in the area, with reviews.", `https://www.viator.com/searchResults/all?text=${q(trail.name)}`],
+    ];
+    $(".booking").innerHTML = booking.map(([kind, site, text, href]) => `
+      <li class="booking__item" data-fade>
+        <a href="${href}" target="_blank" rel="noopener">
+          <span class="booking__kind">${kind}</span>
+          <span class="booking__site">${site}</span>
+          <span class="booking__text">${esc(text)}</span>
+          <span class="booking__cta">Search on ${site} ${ARROW}</span>
+        </a>
+      </li>`).join("");
 
     // Credits
     $(".credits__list").innerHTML = photos.map((p) =>

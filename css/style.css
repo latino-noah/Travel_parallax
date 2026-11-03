@@ -552,6 +552,7 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 }
 .hike__price { margin-top: 12px; font-size: 17px; color: var(--muted); }
 .hike__price b { color: var(--white); font-weight: 600; }
+.hike__price small { display: block; margin-top: 2px; font-size: 12px; }
 
 .hike__facts { margin-top: auto; padding-top: 32px; display: grid; gap: 10px; font-size: 13.5px; }
 .hike__facts li { display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--muted); }
