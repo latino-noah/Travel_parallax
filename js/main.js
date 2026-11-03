@@ -14,10 +14,10 @@
   const nav = document.querySelector(".nav");
 
   // Natural size of the mountain photo and where its main summit starts
-  // (measured from assets/mountain.png: top of the peak at 43.9% height, 50.5% width).
+  // (measured from assets/mountain3.png: top of the peak at 44.0% height, 50.7% width).
   const IMG_W = 4096;
   const IMG_H = 2732;
-  const PEAK_Y = 0.439;
+  const PEAK_Y = 0.44;
 
   // How far the summit should rise into the letters, as a share of cap height.
   const PEAK_OVERLAP = 0.44;
