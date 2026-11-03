@@ -276,7 +276,7 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   display: grid; grid-template-columns: 1fr 2fr; align-items: end; gap: 24px;
   margin-bottom: clamp(48px, 8vh, 96px);
 }
-.section__head .eyebrow { margin: 0 0 0.5em; }
+.section__head > * { grid-column: 2; }
 
 /* About */
 .about { padding-top: clamp(40px, 10vh, 120px); }
@@ -344,7 +344,6 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 .finder-wrap { position: relative; z-index: 2; }
 
 .finder-head { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: end; gap: 24px 64px; margin-bottom: clamp(36px, 6vh, 64px); }
-.finder-head .eyebrow { grid-column: 1 / -1; margin-bottom: 0; color: rgba(255, 255, 255, 0.75); }
 .finder-head__title {
   font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
   font-size: clamp(40px, 6.6vw, 108px); line-height: 0.9; letter-spacing: -0.035em;
@@ -578,7 +577,6 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 /* Explore by destination — world map */
 .atlas { position: relative; overflow: hidden; background: var(--navy-900); padding-top: clamp(96px, 14vh, 160px); }
 .atlas__head { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: end; gap: 20px 64px; }
-.atlas__head .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
 .atlas__title {
   font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
   font-size: clamp(40px, 6vw, 96px); line-height: 0.92; letter-spacing: -0.035em; max-width: 10ch;
@@ -762,6 +760,7 @@ html.is-loading, html.is-loading body { overflow: hidden; }
   .footer__mail { font-size: clamp(22px, 7.4vw, 44px); padding-block: 8px; }
 
   .section__head { grid-template-columns: 1fr; }
+  .section__head > * { grid-column: auto; }
   .about__grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(3, 1fr); }
   .fleet__row { grid-template-columns: 28px 1fr; row-gap: 6px; }
